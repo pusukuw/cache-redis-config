@@ -1,0 +1,22 @@
+name: Redis Cache Config
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Print Hello
+        run: echo "Hello from GitHub Actions!"
+
+      - name: Build
+        run: |
+          echo "Building Redis Config..."
+          echo "Configured Redis Cache"
